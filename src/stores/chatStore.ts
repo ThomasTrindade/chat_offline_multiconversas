@@ -10,6 +10,7 @@ export type ChatStoreState = {
   activeConversationId: string | null
   createConversation: () => string
   selectConversation: (conversationId: string) => boolean
+  deleteConversation: (conversationId: string) => boolean
   addMessage: (content: string, author: Author) => ChatMessage | null
   addMessageToConversation: (conversationId: string, message: ChatMessage) => void
   getConversationIds: () => string[]
@@ -71,6 +72,30 @@ export const useChatStore = create<ChatStoreState>()(
         }
 
         set({ activeConversationId: conversationId })
+        return true
+      },
+
+      deleteConversation: (conversationId) => {
+        const conversationExists = Object.prototype.hasOwnProperty.call(
+          get().conversations,
+          conversationId,
+        )
+
+        if (!conversationExists) {
+          return false
+        }
+
+        set((state) => {
+          const nextConversations = { ...state.conversations }
+          delete nextConversations[conversationId]
+
+          return {
+            conversations: nextConversations,
+            activeConversationId:
+              state.activeConversationId === conversationId ? null : state.activeConversationId,
+          }
+        })
+
         return true
       },
 

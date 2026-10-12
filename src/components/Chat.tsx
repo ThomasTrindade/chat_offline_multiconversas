@@ -10,6 +10,7 @@ type ChatProps = {
   conversations: Record<string, ChatMessage[]>
   createConversation: () => string
   selectConversation: (conversationId: string) => boolean
+  deleteConversation: (conversationId: string) => boolean
   addMessage: (content: string, author: Author) => ChatMessage | null
 }
 
@@ -18,6 +19,7 @@ export default function Chat({
   conversations,
   createConversation,
   selectConversation,
+  deleteConversation,
   addMessage,
 }: ChatProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -65,15 +67,17 @@ export default function Chat({
           activeConversationId={activeConversationId}
           isOpen={isSidebarOpen}
           onCreateConversation={() => {
-            const newConversationId = createConversation()
-            setIsSidebarOpen(false)
-            if (newConversationId) {
-              selectConversation(newConversationId)
-            }
+            createConversation()
           }}
           onSelectConversation={(conversationId) => {
             selectConversation(conversationId)
-            setIsSidebarOpen(false)
+          }}
+          onDeleteConversation={(conversationId) => {
+            if (conversationId === activeConversationId) {
+              setDraft('')
+            }
+
+            deleteConversation(conversationId)
           }}
         />
 

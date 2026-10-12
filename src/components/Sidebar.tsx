@@ -6,6 +6,7 @@ type SidebarProps = {
   isOpen: boolean
   onCreateConversation: () => void
   onSelectConversation: (conversationId: string) => void
+  onDeleteConversation: (conversationId: string) => void
 }
 
 export default function Sidebar({
@@ -14,6 +15,7 @@ export default function Sidebar({
   isOpen,
   onCreateConversation,
   onSelectConversation,
+  onDeleteConversation,
 }: SidebarProps) {
   const conversationIds = Object.keys(conversations)
 
@@ -46,6 +48,7 @@ export default function Sidebar({
               conversationId={conversationId}
               isActive={conversationId === activeConversationId}
               onSelect={onSelectConversation}
+              onDelete={onDeleteConversation}
             />
           ))
         )}

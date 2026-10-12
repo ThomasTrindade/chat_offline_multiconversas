@@ -7,6 +7,7 @@ export default function App() {
   const conversations = useChatStore((state) => state.conversations)
   const createConversation = useChatStore((state) => state.createConversation)
   const selectConversation = useChatStore((state) => state.selectConversation)
+  const deleteConversation = useChatStore((state) => state.deleteConversation)
 
   return (
     <Chat
@@ -14,6 +15,7 @@ export default function App() {
       conversations={conversations}
       createConversation={createConversation}
       selectConversation={selectConversation}
+      deleteConversation={deleteConversation}
       addMessage={addMessage}
     />
   )

@@ -106,13 +106,15 @@ As fases devem ser executadas na ordem apresentada. Cada fase depende da conclus
 
 **Atividades:**
 
-- Validar criação de várias conversas e isolamento dos respectivos históricos.
-- Validar seleção e alternância entre conversas, inclusive após recarregar ou reabrir o site.
-- Validar a inicialização sem conversa ativa com e sem conversas persistidas.
-- Validar o estado desabilitado do composer e o comportamento do sidebar em diferentes tamanhos de tela.
-- Executar as verificações de lint e build disponíveis no projeto e corrigir regressões relacionadas à funcionalidade.
+- [x] Validar criação de várias conversas e isolamento dos respectivos históricos.
+- [x] Validar seleção e alternância entre conversas, inclusive após recarregar ou reabrir o site.
+- [x] Validar a inicialização sem conversa ativa com e sem conversas persistidas.
+- [x] Validar o estado desabilitado do composer e o comportamento do sidebar em diferentes tamanhos de tela.
+- [x] Executar as verificações de lint e build disponíveis no projeto e corrigir regressões relacionadas à funcionalidade.
 
 **Condição de conclusão:** todos os critérios de aceite abaixo são atendidos e as verificações aplicáveis terminam sem erros introduzidos pela funcionalidade.
+
+**Status:** concluída.
 
 ## Critérios de aceite
 
