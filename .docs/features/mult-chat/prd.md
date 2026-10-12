@@ -116,6 +116,20 @@ As fases devem ser executadas na ordem apresentada. Cada fase depende da conclus
 
 **Status:** concluída.
 
+### Fase 5 — Polimento e validação final
+
+**Objetivo:** revisar os detalhes finais da experiência e confirmar estabilidade visual e funcional em conjunto.
+
+**Atividades:**
+
+- [x] Revisar a consistência visual do sidebar, do estado vazio e da conversa ativa.
+- [x] Validar o comportamento em desktop e em dispositivos móveis sem regressões de layout.
+- [x] Confirmar criação, seleção, alternância e persistência do histórico em múltiplas conversas.
+- [x] Verificar o estado desabilitado do composer quando não há conversa ativa e a navegação do sidebar no celular.
+- [x] Executar lint e build disponíveis e corrigir regressões relacionadas à funcionalidade.
+
+**Condição de conclusão:** concluída — a implementação final está estável e atende aos critérios de aceite, com validação de lint/build sem erros.
+
 ## Critérios de aceite
 
 1. Ao iniciar o site, inclusive quando já existem conversas persistidas, nenhum chat está ativo até que a pessoa selecione ou crie um; o composer fica desabilitado, com opacidade de 50%.
