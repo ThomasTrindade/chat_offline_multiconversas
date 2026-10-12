@@ -5,9 +5,14 @@ import MessageBubble from './MessageBubble'
 type ChatHistoryProps = {
   messages: ChatMessage[]
   listRef: RefObject<HTMLDivElement | null>
+  emptyMessage?: string
 }
 
-export default function ChatHistory({ messages, listRef }: ChatHistoryProps) {
+export default function ChatHistory({
+  messages,
+  listRef,
+  emptyMessage = 'Nenhuma mensagem ainda.',
+}: ChatHistoryProps) {
   return (
     <div
       ref={listRef}
@@ -18,7 +23,7 @@ export default function ChatHistory({ messages, listRef }: ChatHistoryProps) {
     >
       {messages.length === 0 ? (
         <div className="flex h-full min-h-[200px] items-center justify-center text-center text-sm text-stone-500">
-          Nenhuma mensagem ainda.
+          {emptyMessage}
         </div>
       ) : (
         <div className="space-y-3">

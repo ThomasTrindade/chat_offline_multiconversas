@@ -78,12 +78,12 @@ As fases devem ser executadas na ordem apresentada. Cada fase depende da conclus
 
 **Atividades:**
 
-- Substituir o estado isolado de mensagens em `App` pelo estado da conversa ativa na store.
-- Exibir o estado vazio quando nenhuma conversa estiver ativa.
-- Conectar o envio do composer à conversa ativa, preservando os dados e o comportamento atual das mensagens.
-- Impedir o envio e desabilitar o composer e seus controles quando não houver conversa ativa, aplicando 50% de opacidade.
+- [x] Substituir o estado isolado de mensagens em `App` pelo estado da conversa ativa na store.
+- [x] Exibir o estado vazio quando nenhuma conversa estiver ativa.
+- [x] Conectar o envio do composer à conversa ativa, preservando os dados e o comportamento atual das mensagens.
+- [x] Impedir o envio e desabilitar o composer e seus controles quando não houver conversa ativa, aplicando 50% de opacidade.
 
-**Condição de conclusão:** mensagens aparecem e são adicionadas somente ao histórico da conversa selecionada; sem conversa ativa, o composer não permite ações.
+**Condição de conclusão:** concluída — mensagens aparecem e são adicionadas somente ao histórico da conversa selecionada; sem conversa ativa, o composer não permite ações.
 
 ### Fase 3 — Sidebar e navegação responsiva
 
@@ -91,14 +91,14 @@ As fases devem ser executadas na ordem apresentada. Cada fase depende da conclus
 
 **Atividades:**
 
-- Criar o sidebar à esquerda com a lista de conversas identificadas por seus IDs completos.
-- Indicar visualmente a conversa ativa e permitir selecioná-la.
-- Adicionar o botão de nova conversa; ao acioná-lo, criar e selecionar uma conversa vazia.
-- Manter o sidebar visível em telas desktop.
-- Em telas de celular, adicionar o botão hambúrguer no canto superior esquerdo para abrir e fechar o sidebar.
-- Manter o sidebar aberto ao selecionar uma conversa no celular; fechá-lo somente pelo botão de controle.
+- [x] Criar o sidebar à esquerda com a lista de conversas identificadas por seus IDs completos.
+- [x] Indicar visualmente a conversa ativa e permitir selecioná-la.
+- [x] Adicionar o botão de nova conversa; ao acioná-lo, criar e selecionar uma conversa vazia.
+- [x] Manter o sidebar visível em telas desktop.
+- [x] Em telas de celular, adicionar o botão hambúrguer no canto superior esquerdo para abrir e fechar o sidebar.
+- [x] Manter o sidebar aberto ao selecionar uma conversa no celular; fechá-lo somente pelo botão de controle.
 
-**Condição de conclusão:** a lista, criação e seleção funcionam nos layouts desktop e celular conforme os comportamentos especificados.
+**Condição de conclusão:** concluída — a lista, criação e seleção funcionam nos layouts desktop e celular conforme os comportamentos especificados.
 
 ### Fase 4 — Validação integrada
 
